@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group button {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #555;
+        }
+
+        .actions button {
+            margin-right: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .actions button.delete {
+            background-color: #dc3545;
+        }
+
+        .actions button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#">Homepage</a>
+        <a href="#view">View Items</a>
+        <a href="#add">Add Items</a>
+    </nav>
+
+    <div class="container">
+        <!-- Homepage Section -->
+        <section id="homepage">
+            <h2>Welcome to the Admin Dashboard</h2>
+            <p>Manage your items effectively with the options to view, add, edit, or delete items.</p>
+        </section>
+
+        <!-- View Items Section -->
+        <section id="view">
+            <h2>View Items</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sample Item</td>
+                        <td>Sample Description</td>
+                        <td class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Items Section -->
+        <section id="add">
+            <h2>Add Items</h2>
+            <form>
+                <div class="form-group">
+                    <label for="item-name">Item Name:</label>
+                    <input type="text" id="item-name" placeholder="Enter item name">
+                </div>
+                <div class="form-group">
+                    <label for="item-description">Description:</label>
+                    <input type="text" id="item-description" placeholder="Enter item description">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Item</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
